@@ -1,3 +1,5 @@
+package com.ivaa.naturalint;
+
 import java.io.*;
 import java.net.URL;
 import java.net.URLDecoder;
@@ -62,7 +64,7 @@ public class Main {
 
         try
         {
-            URL url = Main.class.getResource("config.properties");
+            URL url = Main.class.getClassLoader().getResource("config.properties");
             if (url != null)
             {
                 String filePath = URLDecoder.decode(url.getPath(), "UTF-8");
